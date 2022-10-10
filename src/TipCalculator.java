@@ -1,14 +1,14 @@
 public class TipCalculator {
 
     //Declaring variables
-    private int numpeople; // number of people in the party
+    private int people; // number of people in the party
     private double totalBillBeforeTip = 0.0; // Total cost without tip
-    private double tipPercentage;
+    private double tipPercent;
 
 
     public TipCalculator(int people, double tipPercent) {
-        people = numpeople;
-        tipPercent = tipPercentage;
+        this.people = people;
+        this.tipPercent = tipPercent;
         totalBillBeforeTip = 0.0;
     }
 
@@ -17,7 +17,7 @@ public class TipCalculator {
     }
 
     public double getTipPercentage(){
-        return tipPercentage;
+        return tipPercent;
     }
 
     public void addMeal(double cost){
@@ -25,7 +25,7 @@ public class TipCalculator {
     }
 
     public double tipAmount(){
-        return totalBillBeforeTip * (tipPercentage / 100);
+        return totalBillBeforeTip * (tipPercent / 100);
     }
 
     public double totalBill(){
@@ -33,15 +33,15 @@ public class TipCalculator {
     }
 
     public double perPersonCostBeforeTip(){
-        return totalBillBeforeTip / numpeople;
+        return totalBillBeforeTip / people;
     }
 
     public double perPersonTipAmount(){
-        return tipAmount() / numpeople;
+        return tipAmount() / people;
     }
 
     public double perPersonTotalCost(){
-        return totalBill() / numpeople;
+        return totalBill() / people;
     }
 
 }
